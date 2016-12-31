@@ -1,5 +1,15 @@
 import api from './api';
 
+if (global.navigator && global.navigator.product === 'ReactNative') {
+    global.navigator.mimeTypes = '';
+    try {
+        global.navigator.userAgent = 'ReactNative';
+    }
+    catch (e) {
+        console.log('Tried to fake useragent, but failed. This is normal on some devices, you may ignore this error: ' + e.message);
+    }
+}
+
 function init(apiHost, wsHost, appId, appSecret, deviceId) {
   const io = require('socket.io-client');
   const socket = io(wsHost, { secure: true });

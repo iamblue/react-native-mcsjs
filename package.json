@@ -1,0 +1,14 @@
+{
+  "name": "react-native-mcsjs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "author": "iamblue",
+  "license": "Apache2",
+  "dependencies": {
+    "socket.io-client": "^1.7.2"
+  }
+}
